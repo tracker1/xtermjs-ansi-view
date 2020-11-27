@@ -1,0 +1,66 @@
+<!doctype html><!-- 
+  Most of the fonts from:
+    https://int10h.org/oldschool-pc-fonts/
+    https://zehfernando.com/2015/revisiting-vga-fonts/
+
+  ANSI from:
+    https://16colo.rs/pack/acdu0295/
+-->
+  <html>
+    <head>
+      <meta charset="utf-8"/>
+      <link rel="stylesheet" href="https://unpkg.com/xterm@4.9.0/css/xterm.css" />
+      <style id="font" type="text/css">
+        @font-face {
+          font-family: "CP437";
+          src: url("fonts/Web437_ATI_8x16.woff");
+        }
+        @font-face {
+          font-family: "Cascadia Code";
+          src: url("fonts/CascadiaCodePL.woff2");
+        }
+        @font-face {
+          font-family: "Fira Code";
+          src: url("fonts/FiraCode-VF.woff2");
+        }
+
+        html, body {
+          font-family: "CP437", "Cascadia Code", "Fira Code", monospace
+        }
+      </style>
+      <style type="text/css">
+        html, body {
+          overflow: hidden;
+          width: 100vw;
+          height: 100vh;
+          border: 0;
+          margin: 0;
+          padding: 0;
+          background-color: #000;
+          color: #ccc;
+          font-size: 16px;
+        }
+        #picker {
+          width: 100%;
+          height: 50px;
+        }
+        #picker > div {
+          display: flex;
+          flex-direction: row;
+        }
+        #picker > div > div {
+          padding-right: 1em;
+        }
+
+        #terminal {
+          width: 100vw;
+          height: calc(100% - 50px);
+        }
+      </style>
+    </head>
+    <body>
+      <div id="picker"></div>
+      <div id="terminal"></div>
+      <script src="app.js" type="module"></script>
+    </body>
+  </html>

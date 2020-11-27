@@ -1,0 +1,9 @@
+* text=lf
+*.cmd eol=crlf
+*.bat eol=crlf
+*.ans	eol=crlf
+*.asc	eol=crlf
+*.msg	eol=crlf
+*.rip	eol=crlf
+*.diz	eol=crlf
+*.bin	-text
